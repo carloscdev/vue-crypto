@@ -37,9 +37,9 @@
   width: 30%;
   height: 30%;
   margin: 0 auto;
-  background-color: #f97316;
   border-radius: 100%;
   animation: sk-chase-dot-before 2.0s infinite ease-in-out both;
+  @apply bg-primary;
 }
 
 .sk-chase-dot:nth-child(1) { animation-delay: -1.1s; }

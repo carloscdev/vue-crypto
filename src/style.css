@@ -1,33 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --primary: #5367FF;
+    --gray: #121318;
+    --dark: #080808;
+}
+
 body {
     background-size: cover;
     min-height: 100vh;
-    font-family: 'Outfit', sans-serif;
-    background-color: #f8f8f8;
-}
-header {
+    font-family: 'Nunito Sans', sans-serif;
     background-image: url('./assets/dot.png');
+    @apply bg-dark;
 }
 .container {
-    max-width: 50rem;
+    max-width: 1280px;
     width: 95%;
     margin: 0 auto;
 }
 
 select,
 input[type="search"] {
-    @apply h-14 rounded-md bg-inherit border px-3 w-full text-base focus:outline-none focus:border-orange-500;
-}
-select {
-    @apply bg-neutral-700 border-neutral-500;
-}
-input[type="search"] {
-    @apply  bg-white;
+    @apply h-8 bg-gray px-3 mt-2 text-base focus:outline-none focus:border-primary text-neutral-400;
 }
 
 .button {
-    @apply w-full bg-orange-500 rounded-full h-14 hover:opacity-90 cursor-pointer text-lg font-bold text-white;
+    @apply w-full rounded-md bg-primary h-14 hover:opacity-90 cursor-pointer text-lg text-white;
+}
+
+.campo {
+    @apply border-neutral-600 border rounded-md h-14 relative overflow-hidden flex items-center;
+}
+.campo label {
+    @apply text-xs pt-1 pl-3 absolute top-0 left-0 text-neutral-600;
 }
